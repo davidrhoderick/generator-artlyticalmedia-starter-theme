@@ -40,10 +40,6 @@ if(!class_exists('Timber')) {
 	return;
 }
 
-// @ini_set('upload_max_size' , '64M');
-// @ini_set('post_max_size', '64M');
-// @ini_set('max_execution_time', '300');
-
 /**
  * Sets the directories (inside your theme) to find .twig files
  */
@@ -88,10 +84,6 @@ class <%= functionsafe %>Site extends Timber\Site {
 
 		add_filter('get_image_tag_class',array($this, 'use_only_imgfluid_class'));
 
-		// if($lazyLoad) {
-			// add_filter('get_image_tag_class',array($this, 'add_lazyload_classes'));
-		// }
-
     add_filter('post_thumbnail_html', array($this, 'remove_width_attribute'), 10);
     add_filter('image_send_to_editor', array($this, 'remove_width_attribute'), 10);
     add_filter('the_content', array($this, 'filter_ptags_on_images'));
@@ -127,85 +119,6 @@ class <%= functionsafe %>Site extends Timber\Site {
     return false;
 	}
 
-	public function custom_image_sizes() {
-		# Custom Image Sizes
-		global $content_width; // set above
-		add_image_size('s5120w', 5120);
-		add_image_size('s3840w', 3840);
-		add_image_size('s3200w', 3200);
-		add_image_size('s2560w', 2560);
-		add_image_size('s1920w', 1920);
-		add_image_size('s1600w', 1600);
-		add_image_size('s1280w', 1280);
-		add_image_size('s960w', 960);
-		//add_image_size('s800w', 800);
-		update_option('large_size_w', $content_width); // 800
-		update_option('large_size_h', 0);
-		add_image_size('s640w', 640);
-		add_image_size('s480w', 480);
-		add_image_size('s400w', 400);
-		//add_image_size('s320w', 320);
-		update_option('medium_size_w', 320);
-		update_option('medium_size_h', 0);
-		add_image_size('s240w', 240);
-		add_image_size('s200w', 200);
-		update_option('thumbnail_size_w', 160);
-		update_option('thumbnail_size_h', 0);
-		update_option('thumbnail_crop', 0);
-	}
-
-	# Put all image sizes in array sorted DESC by width
-	public function get_image_sizes() {
-		global $_wp_additional_image_sizes;
-
-		$sizes = array();
-
-		foreach(get_intermediate_image_sizes() as $_size) {
-			if(in_array($_size, array('thumbnail', 'medium', 'large'))) {
-				$sizes[ $_size ]['width']  = get_option("{$_size}_size_w");
-				$sizes[ $_size ]['height'] = get_option("{$_size}_size_h");
-				$sizes[ $_size ]['crop']   = (bool) get_option("{$_size}_crop");
-			} elseif(isset($_wp_additional_image_sizes[ $_size ])) {
-				$sizes[ $_size ] = array(
-					'width'  => $_wp_additional_image_sizes[ $_size ]['width'],
-					'height' => $_wp_additional_image_sizes[ $_size ]['height'],
-					'crop'   => $_wp_additional_image_sizes[ $_size ]['crop'],
-				);
-			}
-		}
-
-		return $sizes;
-	}
-
-	# Add option to enqueue scripts asyncronously
-	public function add_async_forscript($url)
-	{
-		if (strpos($url, '#asyncload')===false)
-			return $url;
-		else if (is_admin())
-			return str_replace('#asyncload', '', $url);
-		else
-			return str_replace('#asyncload', '', $url)."' async='async"; 
-	}
-
-	public function sort_image_sizes() {
-		$all_image_sizes = $this->get_image_sizes();
-
-		uasort($all_image_sizes, function($a, $b) {
-			return $b['width'] - $a['width'];
-		});
-	}
-
-	# Hide some image sizes from media size selector
-	function image_size_selector_options($sizes) {
-		unset($sizes['thumbnail']);
-		unset($sizes['medium']);
-		//unset($sizes['large']);
-		unset($sizes['full']);
-
-		return $newimgsizes;
-	}
-
 	public function amend_redirect_hosts($allowed_hosts, $this_host) {
     $allowed_hosts[] = $this_host;
 
@@ -225,11 +138,6 @@ class <%= functionsafe %>Site extends Timber\Site {
     $class = 'img-fluid';
     return $class;
 	}
-	
-	public function add_lazyload_class($class) {
-    $class .= ' lazy';
-    return $class;
-  }
 	
 	/** This is where you can register custom post types. */
 	public function register_post_types() {

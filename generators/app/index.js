@@ -11,7 +11,7 @@ module.exports = class extends Generator {
       type   : 'input',
       name   : 'themename',
       message: 'Your theme name',
-      default: 'Shiver Me Timbers Theme'
+      default: 'Artlytical Media Starter Theme'
     }, {
       type   : 'input',
       name   : 'version',
@@ -107,7 +107,7 @@ module.exports = class extends Generator {
 
   install() {
     var themeDirectory = 'wp-content/themes/' + this.answers.themesafe;
-    this.spawnCommandSync('git', ['clone', '-b', 'master', 'https://github.com/davidrhoderick/shivermetimbers-theme.git', themeDirectory]);
+    this.spawnCommandSync('git', ['clone', '-b', 'master', 'https://github.com/davidrhoderick/am-starter-theme.git', themeDirectory]);
     
     this.fs.copyTpl(
       this.templatePath('composer.json'),
