@@ -1,0 +1,44 @@
+{
+  "name": "<%= authorsafe %>/<%= name %>",
+  "description": "This is a theme for WordPress that uses ACF Pro and Timber with gulp automation and composer dependency management",
+  "type":"wordpress-theme",
+  "minimum-stability" : "stable",
+  "authors": [
+    {
+      "email": "<%= email %>",
+      "name": "<%= author %>"
+    }  
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields/advanced-custom-fields-pro",
+        "version": "5.8.9",
+        "type": "library",
+        "dist": {
+          "type": "zip",
+          "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k=<%= acfprokey %>&t=5.8.9"
+        },
+        "require": {
+          "composer/installers"               : "^1.4",
+          "ffraenz/private-composer-installer": "^4.0"
+        }
+      }
+    }
+  ],
+  "require": {
+    "timber/timber": "1.*",
+    "advanced-custom-fields/advanced-custom-fields-pro": "*",
+    "components/jquery": "3.4.1",
+    "twbs/bootstrap": "4.4.1",
+    "scssphp/scssphp": "^1.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "5.7.16|6.*"
+  }
+}
