@@ -1,6 +1,6 @@
 {
-  "name": "davidrhoderick/shivermetimbers-theme",
-  "description": "Arrrr, this be a theme to start yuh off on yer travels!",
+  "name": "davidrhoderick/artlytical-media-starter-theme",
+  "description": "This is the starter theme used by Artlytical Media for WordPress using ACF Pro and Timber with gulp automation and composer dependency management",
   "type":"wordpress-theme",
   "minimum-stability" : "stable",
   "authors": [

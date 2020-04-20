@@ -21,7 +21,7 @@ module.exports = class extends Generator {
       type   : 'input',
       name   : 'repository',
       message: 'Your theme\'s repository',
-      default: 'https://github.com/davidrhoderick/am-starter-theme.git'
+      default: 'https://github.com/davidrhoderick/artlyticalmedia-starter-theme.git'
     }, {
       type   : 'input',
       name   : 'author',
@@ -83,7 +83,7 @@ module.exports = class extends Generator {
 
   install() {
     var themeDirectory = this.answers.themesafe;
-    this.spawnCommandSync('git', ['clone', '-b', 'master', 'https://github.com/davidrhoderick/am-starter-theme.git', themeDirectory]);
+    this.spawnCommandSync('git', ['clone', '-b', 'master', 'https://github.com/davidrhoderick/artlyticalmedia-starter-theme.git', themeDirectory]);
     
     this.fs.copyTpl(
       this.templatePath('composer.json'),
