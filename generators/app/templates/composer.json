@@ -1,12 +1,12 @@
 {
-  "name": "davidrhoderick/artlytical-media-starter-theme",
-  "description": "This is the starter theme used by Artlytical Media for WordPress using ACF Pro and Timber with gulp automation and composer dependency management",
+  "name": "<%= authorsafe %>/<%= name %>",
+  "description": "This is a theme for WordPress that uses ACF Pro and Timber with gulp automation and composer dependency management",
   "type":"wordpress-theme",
   "minimum-stability" : "stable",
   "authors": [
     {
-      "email": "david@artlyitcalmedia.com",
-      "name": "davidrhoderick"
+      "email": "<%= email %>",
+      "name": "<%= author %>"
     }  
   ],
   "repositories": [

@@ -58,14 +58,15 @@ module.exports = class extends Generator {
     }]);
 
     this.answers.themesafe = this.answers.themename.replace(/\s+/g, '-').toLowerCase();
+    this.answers.authorsafe = this.answers.author.replace(/\s+/g, '').toLowerCase();
     this.answers.functionsafe = this.answers.themename.replace(/\s|[0-9]/g, '');
 
     if(this.answers.bootstrap) {
-      this.answers.installedDependencies = 'Bootstrap 4';
+      this.answers.installedDependencies = 'Bootstrap 4 dependencies installed.';
       this.answers.styleSCSS = 'style-bootstrap.scss';
       this.answers.siteJS = 'site-bootstrap.js';
     } else {
-      this.answers.installedDependencies = 'None';
+      this.answers.installedDependencies = 'no dependencies installed.';
       this.answers.styleSCSS = 'style-empty.scss';
       this.answers.siteJS = 'site-empty.js';
     }
@@ -78,7 +79,7 @@ module.exports = class extends Generator {
       ' by ' + this.answers.author + '(' + this.answers.email + ')' +
       ' with the ' + this.answers.license + ' license' +
       ' in folder wp-content/themes/' + this.answers.themesafe +
-      ' with the following Bower dependencies installed: ' + this.answers.installedDependencies + '\n'));
+      ' with ' + this.answers.installedDependencies + '\n'));
   }
 
   install() {
@@ -89,6 +90,10 @@ module.exports = class extends Generator {
       this.templatePath('composer.json'),
       this.destinationPath(themeDirectory + '/composer.json'),
       {
+        name      : this.answers.themesafe,
+        authorsafe: this.answers.authorsafe,
+        author    : this.answers.author,
+        email     : this.answers.email,
         acfprokey : this.answers.acfprokey
       }
     );
@@ -96,20 +101,6 @@ module.exports = class extends Generator {
     this.fs.copyTpl(
       this.templatePath('package.json'),
       this.destinationPath(themeDirectory + '/package.json'),
-      {
-        name      : this.answers.themesafe,
-        version   : this.answers.version,
-        repository: this.answers.repository,
-        author    : this.answers.author,
-        email     : this.answers.email,
-        license   : this.answers.license,
-        private   : this.answers.private
-      }
-    );
-
-    this.fs.copyTpl(
-      this.templatePath('bower-' + this.answers.bower + '.json'),
-      this.destinationPath(themeDirectory + '/bower.json'),
       {
         name      : this.answers.themesafe,
         version   : this.answers.version,
@@ -133,24 +124,9 @@ module.exports = class extends Generator {
     );
 
     this.fs.copyTpl(
-      this.templatePath('template.gitignore'),
-      this.destinationPath('.gitignore'),
-      {
-        themesafe: this.answers.themesafe
-      }
-    );
-
-    this.fs.copyTpl(
-      this.templatePath('.bowerrc'),
-      this.destinationPath(themeDirectory + '/.bowerrc'));
-
-    this.fs.copyTpl(
       this.templatePath('gulpfile.js'),
       this.destinationPath(themeDirectory + '/gulpfile.js'),
       { proxy: this.answers.proxy });
-
-    this.fs.delete(themeDirectory + '/.git');
-    this.fs.delete(themeDirectory + '/.gitignore');
 
     var workingDirectory = process.cwd() + '/' + themeDirectory;
     process.chdir(workingDirectory);
@@ -173,7 +149,7 @@ module.exports = class extends Generator {
 
   end() {
     this.spawnCommandSync('composer', ['install', '--ignore-platform-reqs']);
-    // this.log(chalk.bold.red('\nPlease install Timber and Advanced Custom Fields Pro plugins now and start coding!\n'));
+    
     this.spawnCommandSync('gulp');
   }
 };
