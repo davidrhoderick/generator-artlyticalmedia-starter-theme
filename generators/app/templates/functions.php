@@ -101,12 +101,19 @@ class <%= functionsafe %>Site extends Timber\Site {
     
 		add_action('wp_enqueue_scripts', array($this, 'add_googleanalytics'));
 		
+		add_action('wp_enqueue_scripts', array($this, 'remove_wp_block_library_css'));
+		
 		/* If having issues with password protected links, try code below: */
     // add_filter('allowed_redirect_hosts', array($this, 'amend_redirect_hosts'), 10, 2);
 
 		add_action('admin_menu', array($this, 'add_options_pages'));
 		
 		parent::__construct();
+  }
+
+  public function remove_wp_block_library_css() {
+    wp_dequeue_style('wp-block-library');
+    wp_dequeue_style('wp-block-library-theme');
   }
   
   public function add_options_pages() {
@@ -130,7 +137,7 @@ class <%= functionsafe %>Site extends Timber\Site {
       'parent_slug'	=> 'theme-settings',
     ));
   }
-  
+
 	public function acf_settings_url($url) {
     return ACF_URL;
 	}
