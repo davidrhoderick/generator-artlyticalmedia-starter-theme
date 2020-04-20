@@ -1,12 +1,12 @@
 /*
  * Theme Name: <%= name %>
  * Description: Starter Theme to use with Timber
- * Author: Upstatement and <%= author %>.
+ * Author: Upstatement, Artlytical Media, and <%= author %>.
  * Version: <%= version %>
  * License: <%= license %>
 */
 
-@import "../vendor/bootstrap/scss/functions";
+@import "../../vendor/twbs/bootstrap/scss/functions";
 
 /* If you want to configure your own Bootstrap variables,
  * uncomment the three lines below, create a file in
@@ -17,43 +17,43 @@
  * provide an easy way to do this so you're on your own!
 */
 //@import "variables/bootstrap";
-@import "../vendor/bootstrap/scss/variables";
+@import "../../vendor/twbs/bootstrap/scss/variables";
 
-@import "../vendor/bootstrap/scss/mixins";
+@import "../../vendor/twbs/bootstrap/scss/mixins";
 
-@import "../vendor/bootstrap/scss/alert";
-@import "../vendor/bootstrap/scss/badge";
-@import "../vendor/bootstrap/scss/breadcrumb";
-@import "../vendor/bootstrap/scss/button-group";
-@import "../vendor/bootstrap/scss/buttons";
-@import "../vendor/bootstrap/scss/card";
-@import "../vendor/bootstrap/scss/carousel";
-@import "../vendor/bootstrap/scss/close";
-@import "../vendor/bootstrap/scss/code";
-@import "../vendor/bootstrap/scss/custom-forms";
-@import "../vendor/bootstrap/scss/dropdown";
-@import "../vendor/bootstrap/scss/forms";
-@import "../vendor/bootstrap/scss/grid";
-@import "../vendor/bootstrap/scss/images";
-@import "../vendor/bootstrap/scss/input-group";
-@import "../vendor/bootstrap/scss/jumbotron";
-@import "../vendor/bootstrap/scss/list-group";
-@import "../vendor/bootstrap/scss/media";
-@import "../vendor/bootstrap/scss/modal";
-@import "../vendor/bootstrap/scss/nav";
-@import "../vendor/bootstrap/scss/navbar";
-@import "../vendor/bootstrap/scss/pagination";
-@import "../vendor/bootstrap/scss/popover";
-@import "../vendor/bootstrap/scss/print";
-@import "../vendor/bootstrap/scss/progress";
-@import "../vendor/bootstrap/scss/reboot";
-@import "../vendor/bootstrap/scss/spinners";
-@import "../vendor/bootstrap/scss/tables";
-@import "../vendor/bootstrap/scss/toasts";
-@import "../vendor/bootstrap/scss/tooltip";
-@import "../vendor/bootstrap/scss/transitions";
-@import "../vendor/bootstrap/scss/type";
-@import "../vendor/bootstrap/scss/utilities";
+@import "../../vendor/twbs/bootstrap/scss/alert";
+@import "../../vendor/twbs/bootstrap/scss/badge";
+@import "../../vendor/twbs/bootstrap/scss/breadcrumb";
+@import "../../vendor/twbs/bootstrap/scss/button-group";
+@import "../../vendor/twbs/bootstrap/scss/buttons";
+@import "../../vendor/twbs/bootstrap/scss/card";
+@import "../../vendor/twbs/bootstrap/scss/carousel";
+@import "../../vendor/twbs/bootstrap/scss/close";
+@import "../../vendor/twbs/bootstrap/scss/code";
+@import "../../vendor/twbs/bootstrap/scss/custom-forms";
+@import "../../vendor/twbs/bootstrap/scss/dropdown";
+@import "../../vendor/twbs/bootstrap/scss/forms";
+@import "../../vendor/twbs/bootstrap/scss/grid";
+@import "../../vendor/twbs/bootstrap/scss/images";
+@import "../../vendor/twbs/bootstrap/scss/input-group";
+@import "../../vendor/twbs/bootstrap/scss/jumbotron";
+@import "../../vendor/twbs/bootstrap/scss/list-group";
+@import "../../vendor/twbs/bootstrap/scss/media";
+@import "../../vendor/twbs/bootstrap/scss/modal";
+@import "../../vendor/twbs/bootstrap/scss/nav";
+@import "../../vendor/twbs/bootstrap/scss/navbar";
+@import "../../vendor/twbs/bootstrap/scss/pagination";
+@import "../../vendor/twbs/bootstrap/scss/popover";
+@import "../../vendor/twbs/bootstrap/scss/print";
+@import "../../vendor/twbs/bootstrap/scss/progress";
+@import "../../vendor/twbs/bootstrap/scss/reboot";
+@import "../../vendor/twbs/bootstrap/scss/spinners";
+@import "../../vendor/twbs/bootstrap/scss/tables";
+@import "../../vendor/twbs/bootstrap/scss/toasts";
+@import "../../vendor/twbs/bootstrap/scss/tooltip";
+@import "../../vendor/twbs/bootstrap/scss/transitions";
+@import "../../vendor/twbs/bootstrap/scss/type";
+@import "../../vendor/twbs/bootstrap/scss/utilities";
 
 // NOT WORKING BECAUSE OF CSS VARIABLE HANDLING
-// @import "../vendor/bootstrap/scss/bootstrap.scss";
+// @import "../../vendor/twbs/bootstrap/scss/bootstrap.scss";
