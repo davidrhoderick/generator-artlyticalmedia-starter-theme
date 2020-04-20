@@ -104,8 +104,6 @@ class <%= functionsafe %>Site extends Timber\Site {
 		/* If having issues with password protected links, try code below: */
     // add_filter('allowed_redirect_hosts', array($this, 'amend_redirect_hosts'), 10, 2);
 
-		add_filter('clean_url', array($this, 'add_async_forscript'), 11, 1);
-
 		// acf_add_options_page('Site Options');
 		
 		parent::__construct();
