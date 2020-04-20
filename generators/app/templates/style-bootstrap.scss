@@ -6,7 +6,7 @@
  * License: <%= license %>
 */
 
-@import "../bower_components/bootstrap/scss/functions";
+@import "../vendor/bootstrap/scss/functions";
 
 /* If you want to configure your own Bootstrap variables,
  * uncomment the three lines below, create a file in
@@ -17,43 +17,43 @@
  * provide an easy way to do this so you're on your own!
 */
 //@import "variables/bootstrap";
-@import "../bower_components/bootstrap/scss/variables";
+@import "../vendor/bootstrap/scss/variables";
 
-@import "../bower_components/bootstrap/scss/mixins";
+@import "../vendor/bootstrap/scss/mixins";
 
-@import "../bower_components/bootstrap/scss/alert";
-@import "../bower_components/bootstrap/scss/badge";
-@import "../bower_components/bootstrap/scss/breadcrumb";
-@import "../bower_components/bootstrap/scss/button-group";
-@import "../bower_components/bootstrap/scss/buttons";
-@import "../bower_components/bootstrap/scss/card";
-@import "../bower_components/bootstrap/scss/carousel";
-@import "../bower_components/bootstrap/scss/close";
-@import "../bower_components/bootstrap/scss/code";
-@import "../bower_components/bootstrap/scss/custom-forms";
-@import "../bower_components/bootstrap/scss/dropdown";
-@import "../bower_components/bootstrap/scss/forms";
-@import "../bower_components/bootstrap/scss/grid";
-@import "../bower_components/bootstrap/scss/images";
-@import "../bower_components/bootstrap/scss/input-group";
-@import "../bower_components/bootstrap/scss/jumbotron";
-@import "../bower_components/bootstrap/scss/list-group";
-@import "../bower_components/bootstrap/scss/media";
-@import "../bower_components/bootstrap/scss/modal";
-@import "../bower_components/bootstrap/scss/nav";
-@import "../bower_components/bootstrap/scss/navbar";
-@import "../bower_components/bootstrap/scss/pagination";
-@import "../bower_components/bootstrap/scss/popover";
-@import "../bower_components/bootstrap/scss/print";
-@import "../bower_components/bootstrap/scss/progress";
-@import "../bower_components/bootstrap/scss/reboot";
-@import "../bower_components/bootstrap/scss/spinners";
-@import "../bower_components/bootstrap/scss/tables";
-@import "../bower_components/bootstrap/scss/toasts";
-@import "../bower_components/bootstrap/scss/tooltip";
-@import "../bower_components/bootstrap/scss/transitions";
-@import "../bower_components/bootstrap/scss/type";
-@import "../bower_components/bootstrap/scss/utilities";
+@import "../vendor/bootstrap/scss/alert";
+@import "../vendor/bootstrap/scss/badge";
+@import "../vendor/bootstrap/scss/breadcrumb";
+@import "../vendor/bootstrap/scss/button-group";
+@import "../vendor/bootstrap/scss/buttons";
+@import "../vendor/bootstrap/scss/card";
+@import "../vendor/bootstrap/scss/carousel";
+@import "../vendor/bootstrap/scss/close";
+@import "../vendor/bootstrap/scss/code";
+@import "../vendor/bootstrap/scss/custom-forms";
+@import "../vendor/bootstrap/scss/dropdown";
+@import "../vendor/bootstrap/scss/forms";
+@import "../vendor/bootstrap/scss/grid";
+@import "../vendor/bootstrap/scss/images";
+@import "../vendor/bootstrap/scss/input-group";
+@import "../vendor/bootstrap/scss/jumbotron";
+@import "../vendor/bootstrap/scss/list-group";
+@import "../vendor/bootstrap/scss/media";
+@import "../vendor/bootstrap/scss/modal";
+@import "../vendor/bootstrap/scss/nav";
+@import "../vendor/bootstrap/scss/navbar";
+@import "../vendor/bootstrap/scss/pagination";
+@import "../vendor/bootstrap/scss/popover";
+@import "../vendor/bootstrap/scss/print";
+@import "../vendor/bootstrap/scss/progress";
+@import "../vendor/bootstrap/scss/reboot";
+@import "../vendor/bootstrap/scss/spinners";
+@import "../vendor/bootstrap/scss/tables";
+@import "../vendor/bootstrap/scss/toasts";
+@import "../vendor/bootstrap/scss/tooltip";
+@import "../vendor/bootstrap/scss/transitions";
+@import "../vendor/bootstrap/scss/type";
+@import "../vendor/bootstrap/scss/utilities";
 
 // NOT WORKING BECAUSE OF CSS VARIABLE HANDLING
-// @import "../bower_components/bootstrap/scss/bootstrap.scss";
+// @import "../vendor/bootstrap/scss/bootstrap.scss";

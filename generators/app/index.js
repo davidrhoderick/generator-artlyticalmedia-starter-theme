@@ -21,7 +21,7 @@ module.exports = class extends Generator {
       type   : 'input',
       name   : 'repository',
       message: 'Your theme\'s repository',
-      default: 'https://github.com/davidrhoderick/shivermetimbers-theme.git' // Default to current folder name
+      default: 'https://github.com/davidrhoderick/am-starter-theme.git'
     }, {
       type   : 'input',
       name   : 'author',
@@ -43,22 +43,10 @@ module.exports = class extends Generator {
       message: 'Is this project private?',
       default: true
     }, {
-      type   : 'list',
-      name   : 'bower',
-      message: 'What bower dependencies do you want installed?',
-      choices: [{
-          name: 'Bootstrap 4',
-          value: 'bootstrap'
-        }, {
-          name: 'jQuery',
-          value: 'jquery'
-        }, {
-          name: 'Foundation Sites 6',
-          value: 'foundation'
-        }, {
-          name: 'None',
-          value: 'empty'
-        }]
+      type   : 'confirm',
+      name   : 'bootstrap',
+      message: 'Install Bootstrap dependencies?',
+      choices: true
       }, {
       type   : 'input',
       name   : 'acfprokey',
@@ -72,26 +60,14 @@ module.exports = class extends Generator {
     this.answers.themesafe = this.answers.themename.replace(/\s+/g, '-').toLowerCase();
     this.answers.functionsafe = this.answers.themename.replace(/\s|[0-9]/g, '');
 
-    switch(this.answers.bower) {
-      case 'bootstrap':
-        this.answers.installedDependencies = 'Bootstrap 4';
-        this.answers.styleSCSS = 'style-bootstrap.scss';
-        this.answers.siteJS = 'site-bootstrap.js';
-        break;
-      case 'jquery':
-        this.answers.installedDependencies = 'jQuery';
-        this.answers.styleSCSS = 'style-empty.scss';
-        this.answers.siteJS = 'site-jquery.js';
-        break;
-      case 'foundation':
-        this.answers.installedDependencies = 'Foundation Sites 6';
-        this.answers.styleSCSS = 'style-foundation.scss';
-        this.answers.siteJS = 'site-foundation.js';
-        break;
-      case 'empty':
-        this.answers.installedDependencies = 'None';
-        this.answers.styleSCSS = 'style-empty.scss';
-        this.answers.siteJS = 'site-empty.js';
+    if(this.answers.bootstrap) {
+      this.answers.installedDependencies = 'Bootstrap 4';
+      this.answers.styleSCSS = 'style-bootstrap.scss';
+      this.answers.siteJS = 'site-bootstrap.js';
+    } else {
+      this.answers.installedDependencies = 'None';
+      this.answers.styleSCSS = 'style-empty.scss';
+      this.answers.siteJS = 'site-empty.js';
     }
   }
 
@@ -106,7 +82,7 @@ module.exports = class extends Generator {
   }
 
   install() {
-    var themeDirectory = 'wp-content/themes/' + this.answers.themesafe;
+    var themeDirectory = this.answers.themesafe;
     this.spawnCommandSync('git', ['clone', '-b', 'master', 'https://github.com/davidrhoderick/am-starter-theme.git', themeDirectory]);
     
     this.fs.copyTpl(

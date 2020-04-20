@@ -25,7 +25,7 @@
           "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k=<%= acfprokey %>&t=5.8.9"
         },
         "require": {
-          "composer/installers": "^1.4",
+          "composer/installers"               : "^1.4",
           "ffraenz/private-composer-installer": "^4.0"
         }
       }
@@ -33,7 +33,8 @@
   ],
   "require": {
     "timber/timber": "1.*",
-    "advanced-custom-fields/advanced-custom-fields-pro": "*"
+    "advanced-custom-fields/advanced-custom-fields-pro": "*",
+    "twbs/bootstrap": "4.4.1"
   },
   "require-dev": {
     "phpunit/phpunit": "5.7.16|6.*"

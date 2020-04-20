@@ -14,7 +14,7 @@ gulp.task('sass', function(){
     .pipe(sass({outputStyle: 'compressed'}))
       .on('error', sass.logError)
     .pipe(sassLint({
-      files: { ignore: 'static/bower_components/**/*.scss' }
+      files: { ignore: 'vendor/**/*.scss' }
     }))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./'))
@@ -46,7 +46,7 @@ gulp.task('serve', ['sass', 'js'], function () {
 
   gulp.watch('static/scss/**/*.scss', ['sass']);
   gulp.watch('static/js/**/*.js', ['js']);
-  gulp.watch(['*.php', 'woocommerce/**/*.php', 'templates/**/*.twig', 'views/**/*.twig']).on('change', browserSync.reload);
+  gulp.watch(['composer.json', '*.php', 'woocommerce/**/*.php', 'templates/**/*.twig', 'views/**/*.twig']).on('change', browserSync.reload);
 });
 
 gulp.task('default', ['serve']);

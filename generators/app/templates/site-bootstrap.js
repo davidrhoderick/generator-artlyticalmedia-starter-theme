@@ -1,2 +1,1 @@
-//=require ../bower_components/jquery/dist/jquery.js
-//=require ../bower_components/bootstrap/dist/js/bootstrap.bundle.js
+//=require ../vendor/bootstrap/dist/js/bootstrap.bundle.js
