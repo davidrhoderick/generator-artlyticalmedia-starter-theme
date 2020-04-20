@@ -65,10 +65,14 @@ module.exports = class extends Generator {
       this.answers.installedDependencies = 'Bootstrap 4 dependencies installed.';
       this.answers.styleSCSS = 'style-bootstrap.scss';
       this.answers.siteJS = 'site-bootstrap.js';
+      this.answers.functionsPHP = 'functions-bootstrap.php';
+      this.answers.composerJSON = 'composer-bootstrap.json';
     } else {
       this.answers.installedDependencies = 'no dependencies installed.';
       this.answers.styleSCSS = 'style-empty.scss';
       this.answers.siteJS = 'site-empty.js';
+      this.answers.functionsPHP = 'functions-empty.php';
+      this.answers.composerJSON = 'composer-empty.json';
     }
   }
 
@@ -87,7 +91,7 @@ module.exports = class extends Generator {
     this.spawnCommandSync('git', ['clone', '-b', 'master', 'https://github.com/davidrhoderick/artlyticalmedia-starter-theme.git', themeDirectory]);
     
     this.fs.copyTpl(
-      this.templatePath('composer.json'),
+      this.templatePath(this.answers.composerJSON),
       this.destinationPath(themeDirectory + '/composer.json'),
       {
         name      : this.answers.themesafe,
@@ -113,7 +117,7 @@ module.exports = class extends Generator {
     );
 
     this.fs.copyTpl(
-      this.templatePath('functions.php'),
+      this.templatePath(this.answers.functionsPHP),
       this.destinationPath(themeDirectory + '/functions.php'),
       {
         themename   : this.answers.themename,
@@ -144,12 +148,28 @@ module.exports = class extends Generator {
 
     if(this.answers.bootstrap) {
       this.fs.copyTpl(
+        this.templatePath('variables-body.scss'),
+        this.destinationPath(themeDirectory + '/static/scss/variables/_body.scss'));
+      
+      this.fs.copyTpl(
+        this.templatePath('variables-fonts.scss'),
+        this.destinationPath(themeDirectory + '/static/scss/variables/_fonts.scss'));
+
+      this.fs.copyTpl(
+        this.templatePath('variables-spacer.scss'),
+        this.destinationPath(themeDirectory + '/static/scss/variables/_spacer.scss'));
+
+      this.fs.copyTpl(
         this.templatePath('variables-colors.scss'),
         this.destinationPath(themeDirectory + '/static/scss/variables/_colors.scss'));
 
       this.fs.copyTpl(
         this.templatePath('variables-bootstrap.scss'),
         this.destinationPath(themeDirectory + '/static/scss/variables/_bootstrap.scss'));
+      
+      this.fs.copyTpl(
+        this.templatePath('group_5e9db60dbef04.json'),
+        this.destinationPath(themeDirectory + '/acf-json/group_5e9db60dbef04.json'));
     }
 
     this.fs.copyTpl(

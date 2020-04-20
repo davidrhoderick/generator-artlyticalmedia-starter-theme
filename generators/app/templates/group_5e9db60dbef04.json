@@ -1,0 +1,373 @@
+{
+  "key": "group_5e9db60dbef04",
+  "title": "Branding",
+  "fields": [
+      {
+          "key": "field_5e9dc0046cd5a",
+          "label": "Fonts",
+          "name": "fonts",
+          "type": "group",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "layout": "block",
+          "sub_fields": [
+              {
+                  "key": "field_5e9dd4cb64aca",
+                  "label": "Providers",
+                  "name": "providers",
+                  "type": "group",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "layout": "block",
+                  "sub_fields": [
+                      {
+                          "key": "field_5e9db60dc655a",
+                          "label": "Google Fonts",
+                          "name": "google_fonts",
+                          "type": "text",
+                          "instructions": "",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "50",
+                              "class": "",
+                              "id": ""
+                          },
+                          "default_value": "",
+                          "placeholder": "",
+                          "prepend": "",
+                          "append": "",
+                          "maxlength": ""
+                      },
+                      {
+                          "key": "field_5e9db60dc68b3",
+                          "label": "Adobe Typekit",
+                          "name": "adobe_typekit",
+                          "type": "text",
+                          "instructions": "",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "50",
+                              "class": "",
+                              "id": ""
+                          },
+                          "default_value": "",
+                          "placeholder": "",
+                          "prepend": "",
+                          "append": "",
+                          "maxlength": ""
+                      }
+                  ]
+              },
+              {
+                  "key": "field_5e9dd4dc64acb",
+                  "label": "Font Families",
+                  "name": "font_families",
+                  "type": "group",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "layout": "block",
+                  "sub_fields": [
+                      {
+                          "key": "field_5e9dd4ed64acc",
+                          "label": "Body",
+                          "name": "body",
+                          "type": "text",
+                          "instructions": "Anything but heading fonts.  Leave blank or change to \"$font-family-sans-serif\" for default or to specify fonts in other ways.",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "50",
+                              "class": "",
+                              "id": ""
+                          },
+                          "default_value": "$font-family-sans-serif",
+                          "placeholder": "",
+                          "prepend": "",
+                          "append": "",
+                          "maxlength": ""
+                      },
+                      {
+                          "key": "field_5e9dd51064acd",
+                          "label": "Headings",
+                          "name": "headings",
+                          "type": "text",
+                          "instructions": "Heading fonts from h1 to h6.  Leave blank or set to \"null\" to fall back on default or Body field above.",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "50",
+                              "class": "",
+                              "id": ""
+                          },
+                          "default_value": "null",
+                          "placeholder": "",
+                          "prepend": "",
+                          "append": "",
+                          "maxlength": ""
+                      }
+                  ]
+              },
+              {
+                  "key": "field_5e9dd57b327be",
+                  "label": "Base font size",
+                  "name": "base_font_size",
+                  "type": "text",
+                  "instructions": "IMPORTANT: Please use valid CSS values such as \"rem\", \"em\", or \"px\".",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "default_value": "1rem",
+                  "placeholder": "",
+                  "prepend": "",
+                  "append": "",
+                  "maxlength": ""
+              }
+          ]
+      },
+      {
+          "key": "field_5e9dd42b64ac5",
+          "label": "Body",
+          "name": "body",
+          "type": "group",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "layout": "block",
+          "sub_fields": [
+              {
+                  "key": "field_5e9dd43164ac6",
+                  "label": "Background",
+                  "name": "background",
+                  "type": "color_picker",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "25",
+                      "class": "",
+                      "id": ""
+                  },
+                  "default_value": "#FFFFFFF"
+              },
+              {
+                  "key": "field_5e9dd44c64ac7",
+                  "label": "Color",
+                  "name": "color",
+                  "type": "color_picker",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "25",
+                      "class": "",
+                      "id": ""
+                  },
+                  "default_value": "#212529"
+              }
+          ]
+      },
+      {
+          "key": "field_5e9dc01c6cd5b",
+          "label": "Colors",
+          "name": "colors",
+          "type": "group",
+          "instructions": "These are based on the Bootstrap 4 color scheme.  If you need to make drastic changes (light to dark et al.), contact your theme developer.",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "layout": "block",
+          "sub_fields": [
+              {
+                  "key": "field_5e9dc02f6cd5c",
+                  "label": "Primary",
+                  "name": "primary",
+                  "type": "color_picker",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "25",
+                      "class": "",
+                      "id": ""
+                  },
+                  "default_value": "#007bff"
+              },
+              {
+                  "key": "field_5e9dc0566cd5d",
+                  "label": "Secondary",
+                  "name": "secondary",
+                  "type": "color_picker",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "25",
+                      "class": "",
+                      "id": ""
+                  },
+                  "default_value": "#6c757d"
+              },
+              {
+                  "key": "field_5e9dc0646cd5e",
+                  "label": "Success",
+                  "name": "success",
+                  "type": "color_picker",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "25",
+                      "class": "",
+                      "id": ""
+                  },
+                  "default_value": "#28a745"
+              },
+              {
+                  "key": "field_5e9dc0786cd5f",
+                  "label": "Info",
+                  "name": "info",
+                  "type": "color_picker",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "25",
+                      "class": "",
+                      "id": ""
+                  },
+                  "default_value": "#17a2b8"
+              },
+              {
+                  "key": "field_5e9dc08d6cd60",
+                  "label": "Warning",
+                  "name": "warning",
+                  "type": "color_picker",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "25",
+                      "class": "",
+                      "id": ""
+                  },
+                  "default_value": "#ffc107"
+              },
+              {
+                  "key": "field_5e9dc0a16cd61",
+                  "label": "Danger",
+                  "name": "danger",
+                  "type": "color_picker",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "25",
+                      "class": "",
+                      "id": ""
+                  },
+                  "default_value": "#dc3545"
+              },
+              {
+                  "key": "field_5e9dc0ac6cd62",
+                  "label": "Light",
+                  "name": "light",
+                  "type": "color_picker",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "25",
+                      "class": "",
+                      "id": ""
+                  },
+                  "default_value": "#f8f9fa"
+              },
+              {
+                  "key": "field_5e9dc0bf6cd63",
+                  "label": "Dark",
+                  "name": "dark",
+                  "type": "color_picker",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "25",
+                      "class": "",
+                      "id": ""
+                  },
+                  "default_value": "#343a40"
+              }
+          ]
+      },
+      {
+          "key": "field_5e9dd46d64ac8",
+          "label": "Spacer",
+          "name": "spacer",
+          "type": "text",
+          "instructions": "IMPORTANT: Use a valid CSS value such as \"em\", \"rem\", or \"px\".",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "default_value": "1rem",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+      }
+  ],
+  "location": [
+      [
+          {
+              "param": "options_page",
+              "operator": "==",
+              "value": "acf-options-branding"
+          }
+      ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "seamless",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": 1,
+  "description": "",
+  "modified": 1587402805
+}
