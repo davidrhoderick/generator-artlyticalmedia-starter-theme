@@ -4,12 +4,7 @@
 
 Builds a WordPress starter theme for use with ACF Pro and Timber plus has SASS preprocessing and Javascript linting, concatenation, and minification.
 
-The latest version also includes a couple configuration options for installed dependencies:
-
-* Install Bootstrap 4 dependencies
-* Install Foundation Sites 6 dependencies
-* Install jQuery dependencies
-* Install no dependencies
+The latest version also includes either building with Bootstrap 4 depedencies or without.  Including Bootstrap 4 also includes jQuery and ScssPhp compilation of ACF Pro included Bootstrap 4 variables.
 
 This is a fork of the generator-shivermetimbers Yeoman generator that runs to create only a WordPress theme (not run in the root directory) and is actively maintained meaning it has many improvements over the original project.
 
@@ -26,6 +21,4 @@ Type `yo artlyticalmedia-starter-theme` in your `wp-content/themes/` directory a
 ### Which probably won't get done because this project is moving...
 
 * Implement testing.
-* Implement copying of variables file for Bootstrap and proper set up.
-* Implement copying of settings file for Foundation Sites and proper set up.
 * Update screenshot.
