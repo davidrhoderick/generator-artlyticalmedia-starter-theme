@@ -22,3 +22,8 @@ Type `yo artlyticalmedia-starter-theme` in your `wp-content/themes/` directory a
 
 * Implement testing.
 * Update screenshot.
+* Ignore watching theme controlled SCSS in gulp.
+* Add `git pull` script for deploying (might not fix depending on if servers can handle it).
+* Include sticky footer code.
+* Create a branch of theme repository with Bootstrap structure.
+* Implement fast and lazy image loading for fast WordPress themes.
