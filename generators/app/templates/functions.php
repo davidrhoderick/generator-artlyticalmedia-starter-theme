@@ -104,11 +104,33 @@ class <%= functionsafe %>Site extends Timber\Site {
 		/* If having issues with password protected links, try code below: */
     // add_filter('allowed_redirect_hosts', array($this, 'amend_redirect_hosts'), 10, 2);
 
-		// acf_add_options_page('Site Options');
+		add_action('admin_menu', array($this, 'add_options_pages'));
 		
 		parent::__construct();
-	}
-
+  }
+  
+  public function add_options_pages() {
+    acf_add_options_page(array(
+      'page_title' 	=> 'Logo & Copyright Owner',
+      'menu_title'	=> 'Theme Settings',
+      'menu_slug' 	=> 'theme-settings',
+      'capability'	=> 'edit_posts',
+      'redirect'		=> false
+    ));
+    
+    acf_add_options_sub_page(array(
+      'page_title' 	=> 'Branding',
+      'menu_title'	=> 'Branding',
+      'parent_slug'	=> 'theme-settings',
+    ));
+    
+    acf_add_options_sub_page(array(
+      'page_title' 	=> 'Contact',
+      'menu_title'	=> 'Contact',
+      'parent_slug'	=> 'theme-settings',
+    ));
+  }
+  
 	public function acf_settings_url($url) {
     return ACF_URL;
 	}
