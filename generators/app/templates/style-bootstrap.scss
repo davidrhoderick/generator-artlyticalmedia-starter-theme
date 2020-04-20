@@ -8,16 +8,7 @@
 
 @import "../../vendor/twbs/bootstrap/scss/functions";
 
-/* If you want to configure your own Bootstrap variables,
- * uncomment the three lines below, create a file in
- * "static/variables" called "_bootstrap.scss" (or however
- * you want to structure your variables) that is a copy of
- * "static/bower_components/bootstrap/scss/variables" but
- * has " !default" removed from every line.  Yeoman doesn't
- * provide an easy way to do this so you're on your own!
-*/
-//@import "variables/bootstrap";
-@import "../../vendor/twbs/bootstrap/scss/variables";
+@import "variables/bootstrap";
 
 @import "../../vendor/twbs/bootstrap/scss/mixins";
 

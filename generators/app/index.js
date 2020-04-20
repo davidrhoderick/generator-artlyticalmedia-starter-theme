@@ -142,6 +142,16 @@ module.exports = class extends Generator {
         license   : this.answers.license
       });
 
+    if(this.answers.bootstrap) {
+      this.fs.copyTpl(
+        this.templatePath('variables-colors.scss'),
+        this.destinationPath(themeDirectory + '/static/scss/variables/_colors.scss'));
+
+      this.fs.copyTpl(
+        this.templatePath('variables-bootstrap.scss'),
+        this.destinationPath(themeDirectory + '/static/scss/variables/_bootstrap.scss'));
+    }
+
     this.fs.copyTpl(
       this.templatePath(this.answers.siteJS),
       this.destinationPath(themeDirectory + '/static/js/site.js'));
