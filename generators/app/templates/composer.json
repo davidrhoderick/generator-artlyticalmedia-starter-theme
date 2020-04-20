@@ -34,6 +34,7 @@
   "require": {
     "timber/timber": "1.*",
     "advanced-custom-fields/advanced-custom-fields-pro": "*",
+    "components/jquery": "3.4.1",
     "twbs/bootstrap": "4.4.1"
   },
   "require-dev": {
